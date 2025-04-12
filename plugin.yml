@@ -1,0 +1,4 @@
+name: TABSepareter
+main: org.kopter.command.program
+version: 1.0
+api-version: 1.16
