@@ -1,0 +1,110 @@
+package org.kopter.command;
+
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerChangedWorldEvent;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class program extends JavaPlugin implements Listener {
+
+    public program() {
+        // <editor-fold defaultstate="collapsed" desc="Compiled Code">
+        /* 0: aload_0
+         * 1: invokespecial #1                  // Method org/bukkit/plugin/java/JavaPlugin."<init>":()V
+         * 4: return
+         *  */
+        // </editor-fold>
+    }
+
+    public void onEnable() {
+        // <editor-fold defaultstate="collapsed" desc="Compiled Code">
+        /* 0: invokestatic  #7                  // Method org/bukkit/Bukkit.getPluginManager:()Lorg/bukkit/plugin/PluginManager;
+         * 3: aload_0
+         * 4: aload_0
+         * 5: invokeinterface #13,  3           // InterfaceMethod org/bukkit/plugin/PluginManager.registerEvents:(Lorg/bukkit/event/Listener;Lorg/bukkit/plugin/Plugin;)V
+         * 10: return
+         *  */
+        // </editor-fold>
+    }
+
+    @EventHandler
+    public void onWorldChange(PlayerChangedWorldEvent event) {
+        // <editor-fold defaultstate="collapsed" desc="Compiled Code">
+        /* 0: aload_1
+         * 1: invokevirtual #19                 // Method org/bukkit/event/player/PlayerChangedWorldEvent.getPlayer:()Lorg/bukkit/entity/Player;
+         * 4: astore_2
+         * 5: aload_0
+         * 6: aload_2
+         * 7: invokevirtual #25                 // Method updateTabList:(Lorg/bukkit/entity/Player;)V
+         * 10: return
+         *  */
+        // </editor-fold>
+    }
+
+    private void updateTabList(Player player) {
+        // <editor-fold defaultstate="collapsed" desc="Compiled Code">
+        /* 0: aload_1
+         * 1: invokeinterface #31,  1           // InterfaceMethod org/bukkit/entity/Player.getWorld:()Lorg/bukkit/World;
+         * 6: invokeinterface #37,  1           // InterfaceMethod org/bukkit/World.getName:()Ljava/lang/String;
+         * 11: astore_2
+         * 12: aload_1
+         * 13: invokeinterface #43,  1           // InterfaceMethod org/bukkit/entity/Player.getScoreboard:()Lorg/bukkit/scoreboard/Scoreboard;
+         * 18: astore_3
+         * 19: aload_3
+         * 20: aload_2
+         * 21: invokeinterface #47,  2           // InterfaceMethod org/bukkit/scoreboard/Scoreboard.getTeam:(Ljava/lang/String;)Lorg/bukkit/scoreboard/Team;
+         * 26: astore        4
+         * 28: aload         4
+         * 30: ifnonnull     42
+         * 33: aload_3
+         * 34: aload_2
+         * 35: invokeinterface #53,  2           // InterfaceMethod org/bukkit/scoreboard/Scoreboard.registerNewTeam:(Ljava/lang/String;)Lorg/bukkit/scoreboard/Team;
+         * 40: astore        4
+         * 42: aload         4
+         * 44: aload_2
+         * 45: invokedynamic #56,  0             // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+         * 50: invokeinterface #60,  2           // InterfaceMethod org/bukkit/scoreboard/Team.setPrefix:(Ljava/lang/String;)V
+         * 55: aload         4
+         * 57: iconst_0
+         * 58: invokeinterface #66,  2           // InterfaceMethod org/bukkit/scoreboard/Team.setCanSeeFriendlyInvisibles:(Z)V
+         * 63: invokestatic  #70                 // Method org/bukkit/Bukkit.getOnlinePlayers:()Ljava/util/Collection;
+         * 66: invokeinterface #74,  1           // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+         * 71: astore        5
+         * 73: aload         5
+         * 75: invokeinterface #80,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+         * 80: ifeq          167
+         * 83: aload         5
+         * 85: invokeinterface #86,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+         * 90: checkcast     #32                 // class org/bukkit/entity/Player
+         * 93: astore        6
+         * 95: aload         6
+         * 97: invokeinterface #31,  1           // InterfaceMethod org/bukkit/entity/Player.getWorld:()Lorg/bukkit/World;
+         * 102: invokeinterface #37,  1           // InterfaceMethod org/bukkit/World.getName:()Ljava/lang/String;
+         * 107: aload_2
+         * 108: invokevirtual #90                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+         * 111: ifeq          140
+         * 114: aload_1
+         * 115: aload_0
+         * 116: aload         6
+         * 118: invokeinterface #96,  3           // InterfaceMethod org/bukkit/entity/Player.showPlayer:(Lorg/bukkit/plugin/Plugin;Lorg/bukkit/entity/Player;)V
+         * 123: aload         4
+         * 125: aload         6
+         * 127: invokeinterface #100,  1          // InterfaceMethod org/bukkit/entity/Player.getName:()Ljava/lang/String;
+         * 132: invokeinterface #101,  2          // InterfaceMethod org/bukkit/scoreboard/Team.addEntry:(Ljava/lang/String;)V
+         * 137: goto          164
+         * 140: aload_1
+         * 141: aload_0
+         * 142: aload         6
+         * 144: invokeinterface #104,  3          // InterfaceMethod org/bukkit/entity/Player.hidePlayer:(Lorg/bukkit/plugin/Plugin;Lorg/bukkit/entity/Player;)V
+         * 149: aload         4
+         * 151: aload         6
+         * 153: invokeinterface #100,  1          // InterfaceMethod org/bukkit/entity/Player.getName:()Ljava/lang/String;
+         * 158: invokeinterface #107,  2          // InterfaceMethod org/bukkit/scoreboard/Team.removeEntry:(Ljava/lang/String;)Z
+         * 163: pop
+         * 164: goto          73
+         * 167: return
+         *  */
+        // </editor-fold>
+    }
+}
